@@ -83,6 +83,7 @@ define Package/suricata/install
 endef
 
 define Package/suricata-scripts/install 
+	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_DIR) $(1)$(PYTHON_PKG_DIR)/{suricata,suricatasc}
 	$(CP) $(PKG_INSTALL_DIR)/usr/bin/{suricatactl,suricatasc} $(1)/usr/bin
 	$(CP) $(PKG_INSTALL_DIR)$(PYTHON_PKG_DIR)/suricata/* \
